@@ -1,3 +1,24 @@
+# venv & poetry
 .venv/
 dist/
+poetry.lock
+
+# Python мусор
 __pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+
+# Ruff кэш
+.ruff_cache/
+
+# IDE/OS
+.vscode/
+.idea/
+.DS_Store
+
+# Сборочные артефакты
+build/
+*.egg-info/
+
