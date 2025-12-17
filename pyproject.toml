@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "project1-borovinskikh-kirill-m25-555"
+name = "project1_borovinskikh_kirill_m25_555"
 version = "0.1.0"
 description = "Лабиринт сокровищ — консольная игра"
 authors = ["Kirill <petr999-9.6@yandex.com>"]
@@ -8,17 +8,13 @@ packages = [{ include = "labyrinth_game" }]
 
 [tool.poetry.scripts]
 project = "labyrinth_game.main:main"
+
 [tool.poetry.dependencies]
 python = ">=3.10,<3.15"
 
-[build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.14.3"
 
-[dependency-groups]
-dev = [
-    "ruff (>=0.14.3,<0.15.0)"
-]
 [tool.ruff]
 line-length = 88
 target-version = "py311"
@@ -27,4 +23,9 @@ exclude = ["venv", ".venv", "dist", "__pycache__"]
 [tool.ruff.lint]
 select = ["E", "F", "I"]
 ignore = []
+
+[build-system]
+requires = ["poetry-core>=1.9.0"]
+build-backend = "poetry.core.masonry.api"
+
 
